@@ -1,131 +1,195 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    font-size: 16px; /* Базовый размер для rem */
+}
+
+body {
+    overflow-x: hidden;
+}
+
 a {
     text-decoration: none;
     color: inherit;
 }
+
 li {
     list-style: none;
 }
 
-
+/* Левый блок */
 .button-left {
-    width: 468px;
-    height: 904px;
+    width: 25vw; /* 25% от ширины экрана */
+    max-width: 468px; /* Ограничиваем на очень широких экранах */
+    height: 100vh; /* На всю высоту экрана */
     background-color: #194DD2;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 48px;
+    gap: 3rem; /* Относительный отступ */
     color: #FFFFFF;
     font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 36px;
-    & p {
-        text-align: center;
-        line-height: 46px;
-    }
+    font-size: 2.5rem; /* Адаптивный размер шрифта */
 }
 
+.button-left p {
+    text-align: center;
+    line-height: 1.3;
+    font-size: 2.5rem;
+}
 
+/* Главный экран */
 .main-screen {
     display: flex;
     width: 100%;
+    height: 100vh;
     overflow: hidden;
 }
 
+/* Навигация */
 .header-nav {
     display: flex;
     background-color: #000000;
-    width: 1000px;
-    height: 117px;
+    width: 100%;
+    height: 10vh; /* 10% от высоты экрана */
+    min-height: 80px; /* Минимальная высота */
     color: #FFFFFF;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    padding-left: 5%;
 }
+
 .ul-list-header {
     display: flex;
-    gap: 32px;
+    gap: 3vw; /* Относительный отступ */
     font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
-    
+    font-size: 1.2rem;
 }
 
-.header-block{
+/* Правый блок */
+.header-block {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    width: calc(100% - 468px); /* остаётся место после .button-left */
+    width: calc(100% - 468px);
     min-width: 0; /* важно для flex-контейнеров */
+    max-width: calc(100% - 468px); /* Ограничение */
     background-image: url("../img/img-header.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
-    
 }
-.header-text-block{
+
+/* Текстовый блок */
+.header-text-block {
     color: #FFFFFF;
-    /* width: 50%; */
-    gap: 52px;
+    gap: 2rem;
     display: flex;
     flex-direction: column;
+    max-width: 80%;
 }
+
 .header-text {
     font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 52px;
+    font-size: 2.6vw; /* Адаптивный размер */
+    line-height: 1.2;
+    letter-spacing: 0.03em;
 }
-.header-description-text{
+
+.header-description-text {
     font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 22px;
+    font-size: 1.1vw; /* Адаптивный размер */
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+
 }
 
-.button-header{
-    height: 117px;
-    width: 339px;
+/* Кнопка входа */
+.button-header {
+    height: 10vh;
+    min-height: 80px;
+    width: 20vw;
+    max-width: 339px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #194DD2;
-    color:  #FFFFFF;
+    color: #FFFFFF;
     font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.2rem;
 }
-.header-content{
+
+/* Контент в правом блоке */
+.header-content {
     display: flex;
     flex-direction: column;
-    gap: 54px;
+    gap: 3rem;
     position: absolute;
-    top: 50%;
-    left: 35%;
+    top: 54%;
+    left: 48%;
     transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 1200px;
 }
-.header-button {
-    & button {
-        height: 60px;
-        width: 300px;
-        background-color: rgba(25, 77, 210, 0);
-        color:  #FFFFFF;
-        font-family: "Montserrat", sans-serif;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 18px;
-        border-radius: 36px;
-        border-color: #FFFFFF;
-        cursor: pointer;
+
+/* Кнопка калькулятора */
+.header-button button {
+    height: 4rem;
+    width: 18rem;
+    max-width: 300px;
+    background-color: rgba(25, 77, 210, 0);
+    color: #FFFFFF;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    border-radius: 36px;
+    border: 2px solid #FFFFFF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.header-button button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Медиазапросы для очень больших экранов (4K) */
+@media (min-width: 2560px) {
+    .header-text {
+        font-size: 4rem; /* Фиксируем размер на очень больших экранах */
+    }
+    .header-description-text {
+        font-size: 1.8rem;
+    }
+    .button-left p {
+        font-size: 3rem;
+    }
+}
+
+/* Для средних экранов (ноутбуки) */
+@media (max-width: 1440px) {
+    .header-text {
+        font-size: 2.8rem;
+    }
+    .header-description-text {
+        font-size: 1.3rem;
     }
 }
