@@ -90,6 +90,7 @@ li {
     background-size: cover;
     background-position: center;
     position: relative;
+    transition: background-image .9s ease;
 }
 
 /* Текстовый блок */
@@ -170,6 +171,34 @@ li {
 .header-button button:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
+
+.buttons-slider{
+    position: absolute;
+    left: 94%;
+    top: 20%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    
+}
+.buttons-slider input[type="radio"]{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    background-color: #FFFFFF99;
+    transition: background-color 0.3s ease;
+}
+.buttons-slider input[type="radio"]:checked{
+    background-color: #FFFFFF;
+}
+.buttons-slider input[type="radio"]:hover{
+    background-color: #FFFFFF99;
+}
+
 
 /* Медиазапросы для очень больших экранов (4K) */
 @media (min-width: 2560px) {
