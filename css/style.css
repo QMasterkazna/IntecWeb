@@ -249,7 +249,7 @@ li {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    gap: 2rem;
+    gap: clamp(20px, 8vw, 100px);
 }
 
 .about-img {
