@@ -386,6 +386,186 @@ li {
     height: clamp(27px, 4vw, 45px);
 }
 
+.img-description {
+    width: 436px;
+    height: 748px;
+    background-image: url("../img/img-description.png");
+    background-repeat: no-repeat;
+    background-size: cover  ;
+    background-position: left;
+    margin-right: 112px;
+}
+.section-description {
+    display: flex;
+    flex-direction: row;
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    /* gap: 121px; */
+}
+
+.description-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+    gap: 3.5rem;
+    margin-right: 141px;
+    & h1 {
+        font-size: clamp(2rem, 4vw, 2.625rem);
+        font-weight: 700;
+        line-height: 1.3;
+        width: 401px;
+    }
+    & .button-description {
+        width: fit-content;
+        padding: 0.8rem 1.8rem;
+        background-color: #194DD2;
+        border-radius: 36px;
+        font-family: "Montserrat", sans-serif;
+        font-size: clamp(0.9rem, 1.125rem, 1.125rem);
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        color: #FFFFFF;
+        
+    }
+}
+.description-infografik {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+    gap: 2rem;
+    width: 591px;
+    position: relative;
+}
+.infografik-text {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(1rem, 1.125rem, 1.125rem);
+    font-weight: 400;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 73px;
+    position: relative;
+}
+.ellipse {
+    width: 45%;
+    height: 100%;
+    background-image: url("../img/elipse.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-size: cover;   */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(1rem, 1.125rem, 1.125rem);
+    font-weight: 500;
+    color: #194DD2;
+    position: absolute;
+    right: 100%;
+}
+.ellipse-blue{
+    width: 45%;
+    height: 100%;
+    background-image: url("../img/elipse-blue.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(1rem, 1.125rem, 1.125rem);
+    font-weight: 500;
+    color: #FFFFFF;
+    position: absolute;
+    right: 100%;
+
+}
+.line-infografik {
+    position: absolute;
+    right: 39.4rem;
+}
+
+
+
+.section-faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 119px;
+    font-family: "Montserrat", sans-serif;
+    & .header-faq {
+        font-family: "Montserrat", sans-serif;
+        font-size: clamp(1rem, 4vw, 2.625rem);
+        font-weight: 700;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.content-faq {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 27px;
+    margin-top: 60px;
+    margin-bottom: 120px;
+    width: clamp(300px, 90vw, 1440px);
+}
+
+
+.accordion-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+    font-weight: 500;
+    & p {
+        width: 565px;
+        margin-left: 41px;
+    }
+}
+
+.left-content-faq {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 3vw + 0.5rem, 2rem); /* От 16px до ~2.5rem */
+    width: 100%;
+    max-width: clamp(300px, 90%, 779px); /* Адаптивная ширина */
+    margin: 0 auto;
+
+}
+.right-content-faq {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 63px;
+    flex-direction: column;
+    gap: 45px;
+    background-color: #0A51CB;
+    color: #FFFFFF;
+    font-family: "Montserrat", sans-serif;
+    width: clamp(280px, 80vw, 685px);
+    height: 420px;
+    & h1 {
+        /* width: 539px; */
+        font-size: clamp(1rem, 4vw, 2rem);
+        font-weight: 700;
+    }
+}
+
 /* =========================================== */
 /*           АДАПТИВНЫЕ МЕДИАЗАПРОСЫ           */
 /* =========================================== */
@@ -571,6 +751,186 @@ li {
         align-items: center;
         width: 100%;
     }
+
+    /* === Секция "Описание с инфографикой" === */
+    .section-description {
+        flex-direction: column;
+        padding: 2rem 5%;
+        text-align: center;
+    }
+
+    .img-description {
+        display: none; /* Скрываем изображение */
+    }
+
+    .description-text {
+        padding: 2rem 1rem;
+        margin-right: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .description-text h1 {
+        font-size: clamp(1.5rem, 6vw, 2.625rem);
+        width: 100%;
+    }
+
+    .description-text svg {
+        margin: 0.5rem auto;
+    }
+
+    .description-text .button-description {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .description-infografik {
+        width: 100%;
+        padding: 1rem;
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .line-infografik {
+        display: none; /* Убираем линию */
+    }
+
+    .infografik-text {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0;
+        background: none;
+        text-align: center;
+    }
+
+    .ellipse,
+    .ellipse-blue {
+        display: none; /* Полностью убираем эллипсы */
+        /* Если хочешь оставить кружки с цифрами — раскомментируй ниже */
+    }
+
+    .infografik-text p {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.6;
+        opacity: 1;
+        color: #FFFFFF;
+    }
+
+    .infografik-text p:first-child {
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+
+
+    /* === Секция FAQ === */
+    .section-faq {
+        margin-top: 80px;
+        padding: 0 5%;
+    }
+
+    .header-faq {
+        gap: 0.8rem;
+    }
+
+    .header-faq h1 {
+        font-size: clamp(1.5rem, 5vw, 2rem); /* Плавное уменьшение */
+        text-align: center;
+        line-height: 1.3;
+    }
+
+    .header-faq svg {
+        width: 40px;
+        margin: 0 auto;
+    }
+
+    .content-faq {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2rem;
+        padding: 1rem 0;
+    }
+
+    /* Левый блок — вопросы */
+    .left-content-faq {
+        width: 100%;
+        gap: 1rem; /* Уменьшено для компактности */
+    }
+
+    .accordion-block {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-weight: 500;
+        padding: 0.8rem 1rem; /* Заменяем margin-left */
+        background-color: transparent;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .accordion-block > div:first-child {
+        flex: 0 0 24px;
+        display: flex;
+        align-items: center;
+    }
+
+    .accordion-block > div:nth-child(2) {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .accordion-block p {
+        font-size: clamp(0.85rem, 4vw, 1rem);
+        line-height: 1.4;
+        margin: 0;
+        color: #141B46;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        width: 100%;
+    }
+
+    .accordion-block svg:last-child {
+        flex: 0 0 16px;
+        width: 16px;
+        height: 10px;
+    }
+    /* Правый блок — ответ — теперь под вопросами */
+    .right-content-faq {
+        width: 100%;
+        padding: 1.5rem 1rem;
+        background-color: #0A51CB;
+        color: #FFFFFF;
+        border-radius: 10px;
+        text-align: center;
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right-content-faq h1 {
+        font-size: 1.3rem; /* Значительно меньше */
+        line-height: 1.4;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .right-content-faq svg {
+        width: 40px;
+        height: 4px;
+    }
+
+    .right-content-faq p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin: 0;
+        opacity: 1;
+    }
 }
 
 /* Для очень маленьких экранов (до 480px) */
@@ -599,5 +959,30 @@ li {
     .block-text p {
         font-size: 0.95rem;
         line-height: 1.6;
+    }
+    /* секция с faq */
+    .section-faq {
+        margin-top: 60px;
+    }
+
+    .header-faq h1 {
+        font-size: 1.4rem;
+    }
+
+    .accordion-block p {
+        font-size: 0.85rem;
+    }
+
+    .right-content-faq h1 {
+        font-size: 1.1rem;
+    }
+
+    .right-content-faq p {
+        font-size: 0.85rem;
+    }
+
+    .accordion-block,
+    .right-content-faq {
+        padding: 1rem;
     }
 }
