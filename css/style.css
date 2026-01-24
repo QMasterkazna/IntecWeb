@@ -637,7 +637,7 @@ li {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
+    padding-bottom: 141px;
     color: #FFFFFF;
 }
 .header-static{
@@ -661,6 +661,7 @@ li {
     max-width: 800px;
     text-align: center;
     font-size: 36px;
+
 }
 
 .content-block {
@@ -710,6 +711,87 @@ li {
     cursor: pointer;
 }
 
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #0C0C0C;
+    color: #FFFFFF;
+    padding-top: 111px;
+    padding-bottom: 120px;
+    gap: 120px;
+}
+.text-footer {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF;
+    opacity: .5;   
+    margin: 40px 0;
+    width: 404px;
+    height: 162px;
+    line-height: 150%;
+}
+.url-footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #EFEFEF;
+    opacity: .8;   
+    margin-top: 25px;
+    gap: 25px;
+    
+    & ul {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+.nav-footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+    opacity: 1;   
+    & h1 {
+        margin-bottom: 26px;
+        
+    }
+}
+
+.data-footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start ;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+    opacity: 1;
+    & h1 {
+        margin-bottom: 26px;
+    }
+}
+.number {
+    margin-top: 25px;
+}
+.data-infoblock {
+    margin-top: 11%;
+    font-weight: 400;
+    font-size: 18px;
+
+}
 
 @media (max-width: 768px) {
     /* === Главный экран === */
@@ -1030,6 +1112,30 @@ li {
         font-size: 28px;
         margin-top: 60px;
     }
+    /*Футер*/
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+        padding-bottom: 60px;
+        text-align: left;
+    }
+    .url-footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .text-footer {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+    .nav-footer,
+    .data-footer {
+        align-items: center;
+        width: 100%;
+        max-width: 400px;
+    }
+    
 }
 
 /* Для очень маленьких экранов (до 480px) */
@@ -1094,4 +1200,15 @@ li {
         margin-top: 40px;
         text-align: center;
     }
+    /*Футер*/
+    .footer {
+        padding-bottom: 40px;
+        /* width: 100%; */
+        text-align: left;
+    }
+    .text-footer, .nav-footer, .data-footer {
+        font-size: 14px;
+        height: auto;
+    }
+    
 }
