@@ -622,6 +622,95 @@ li {
     display: none;
 }
 
+
+
+/*Статический блок*/
+.section-static{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    background: 
+    linear-gradient(rgba(0, 20, 49, 0.7), rgba(0, 20, 49, 0.7)),
+    url('../img/static-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    color: #FFFFFF;
+}
+.header-static{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-top: 110px;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.static-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 85px;
+    margin: 78px 0 80px 0;
+    max-width: 800px;
+    text-align: center;
+    font-size: 36px;
+}
+
+.content-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    & p{
+        font-size: 18px;
+    }
+    & svg {
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
+}
+
+.static-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    margin-top: 103px;
+}
+.button-container-left {
+    width: 300px;
+    height: 60px;
+    background-color: #0A51CB;
+    color: #FFFFFF;
+    border-radius: 36px;
+    border: solid 0px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.button-container-right {
+    width: 300px;
+    height: 60px;
+    background-color: transparent;
+    color: #FFFFFF;
+    border-radius: 36px;
+    border: 2px solid #FFFFFF;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
 @media (max-width: 768px) {
     /* === Главный экран === */
     .buttons-slider {
@@ -931,6 +1020,16 @@ li {
         margin: 0;
         opacity: 1;
     }
+
+    /*Секция статики*/
+    .static-content {
+        font-size: 16px;
+        flex-direction: column;
+    }
+    .header-static {
+        font-size: 28px;
+        margin-top: 60px;
+    }
 }
 
 /* Для очень маленьких экранов (до 480px) */
@@ -984,5 +1083,15 @@ li {
     .accordion-block,
     .right-content-faq {
         padding: 1rem;
+    }
+
+    /*Секция статики*/
+    .static-buttons {
+        flex-direction: column;
+    }
+    .header-static {
+        font-size: 24px;
+        margin-top: 40px;
+        text-align: center;
     }
 }
