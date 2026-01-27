@@ -187,7 +187,8 @@ li {
     color: #FFFFFF;
     font-family: "Montserrat", sans-serif;
     font-style: normal;
-    font-weight: 500;
+    line-height: 1.62; 
+    letter-spacing: 0.03em; 
     font-size: clamp(0.7rem, 1vw, 1.2rem); 
     border-radius: 36px;
     border: 2px solid #FFFFFF;
@@ -349,29 +350,37 @@ li {
 
 .about-blocks-text {
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     gap: clamp(20px, 4vw, 60px);
     justify-content: center;
     margin-top: 4rem;
-    width: 100%;
+    width: 100vw;
 }
 
 .block-text {
     display: flex;
+    
     flex-direction: column;
     gap: 1.5rem;
     width: clamp(280px, 45vw, 473px);
+    box-shadow: 0px 20px 45px 1px rgba(0, 0, 0, 0.1);
+    padding: 67px 39px 67px 39px;
     & p {
         opacity: 70%;
         font-family: "Montserrat", sans-serif;
         font-weight: 400;
+        font-size: 18px;
+        line-height: 1.5;
+        letter-spacing: 0;
+        vertical-align: bottom;
+        text-align: left;
     }
 }
 
 .header-block-text {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 3.75rem;
     align-items: flex-start;
 }
 
@@ -379,8 +388,9 @@ li {
     font-family: "Montserrat", sans-serif;
     font-size: clamp(1rem, 1.125rem, 1.125rem);
     font-weight: 700;
-    color: #141B46;
+    color: #000000;
     margin: 0;
+    width: 262px;
 }
 
 
@@ -564,6 +574,10 @@ li {
     color: #FFFFFF;
     font-family: "Montserrat", sans-serif;
     width: clamp(280px, 80vw, 685px);
+    box-shadow:
+  2px 4px 11px 1px rgba(0, 0, 0, 0.25),
+  2px 4px 11px 1px rgba(0, 0, 0, 0.25);
+
     height: 420px;
     & h1 {
         /* width: 539px; */
@@ -642,6 +656,7 @@ li {
     background-repeat: no-repeat;
     padding-bottom: 141px;
     color: #FFFFFF;
+    width: 100vw;
 }
 .header-static{
     display: flex;
@@ -661,14 +676,10 @@ li {
     align-items: center;
     gap: 85px;
     margin: 78px 0 80px 0;
-    max-width: 800px;
     text-align: center;
     font-size: clamp(1rem, 4vw, 2rem);
     flex-wrap: wrap;
-
-
-
-
+    width: 100vw;   
 }
 
 .content-block {
@@ -1166,6 +1177,7 @@ li {
     .about-text h1 {
         font-size: 1.8rem;
     }
+
     .header-block-text h1 {
         font-size: 1.1rem;
     }
